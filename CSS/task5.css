@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+    width: 33rem;
+    background-color: #dcdb45;
+    border: 1px solid grey;
+    padding-right: 3rem
+}
+.side-left{
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.box{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    padding-left: 0.5rem;
+    width: 8.5rem;
+    margin-top: 0.5rem;
+}
+.name{
+    padding-top: 0.4rem;
+    color: blue;
+}
+.color{
+    background-color: black;
+    height: 2rem;
+    width: 1rem;
+}
+.side-right{
+    color: darkmagenta;
+    font-family: sans-serif;
+}
+p{
+    width: 18rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.end{
+    width: 8rem;
+}
+hr{
+    color: black;
+}

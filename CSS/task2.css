@@ -1,0 +1,36 @@
+.nav-vertical{
+    background-color: aqua;
+    width: 11em;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.vertical{
+    width: 10rem;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding-left: 1rem;
+}
+.First{
+    border-top: 2px solid black;
+    background-color: yellow;
+    height: 3rem;
+}
+.nav-horizontal{
+    display: flex;
+    width: 25rem;
+}
+.horizontal{
+    padding-top: 1rem;
+    background-color: grey;
+    padding-left: 1rem;
+}
+.Firs{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    height: 2rem;
+    width: 3rem;
+    
+}

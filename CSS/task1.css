@@ -1,0 +1,60 @@
+body{
+    margin-top: 6rem;
+}
+table,tr,th,td{
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: #9BD7D5 ;
+}
+th,td{
+    width: 20rem;
+}
+.bigbox{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    height: 20rem;
+    width: 30rem;
+
+}
+#box{
+    height: 3.8rem;
+    width: 6.5rem;
+    border: 3px solid #A5C959;
+}
+.box1{
+    border-radius: 0.4rem;
+}
+.box2{
+    border-radius: 0.5rem;
+}
+.box3{
+    border-radius: 0.9rem;
+}
+.box4{
+    border-radius: 0.6rem;
+}
+.box5{
+    border-radius: 0.1rem;
+}
+.box6{
+    border-radius: 0.8rem;
+}
+.box7{
+    border-radius: 50%;
+    /* border-top: 1rem; */
+}
+.box8{
+    border-radius: 0.2rem;
+}
+.box9{
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
