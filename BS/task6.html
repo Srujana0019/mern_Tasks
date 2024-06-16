@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .error-message {
+        color: red;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="name"
+            placeholder="Enter your name"
+          />
+          <div class="invalid-feedback">Name is required</div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control is-invalid"
+            id="email"
+            placeholder="Enter your email"
+          />
+          <div class="invalid-feedback">Email is required</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control is-invalid"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <div class="invalid-feedback">Password is required</div>
+        </div>
+        <div class="form-group">
+          <label for="hobbies">Hobbies</label>
+          <select class="form-control" id="hobbies">
+            <option value="">Select your hobbies</option>
+            <option value="reading">Reading</option>
+            <option value="traveling">Traveling</option>
+            <option value="cooking">Cooking</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

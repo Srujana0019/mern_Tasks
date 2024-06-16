@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .form-control.is-invalid {
+        border-color: red;
+      }
+      .invalid-feedback {
+        display: block;
+        color: red;
+        font-size: 0.9em;
+      }
+      .form-group i {
+        position: absolute;
+        top: 38px;
+        left: 15px;
+        color: #888;
+      }
+      .input-with-icon {
+        position: relative;
+      }
+      .input-with-icon input,
+      .input-with-icon select {
+        padding-left: 35px;
+      }
+      .input-with-icon textarea {
+        padding-left: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form>
+        <div class="form-group input-with-icon">
+          <label for="firstName">First Name</label>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="firstName"
+            placeholder="First Name"
+          />
+          <div class="invalid-feedback">Please supply your first name</div>
+        </div>
+        <div class="form-group input-with-icon">
+          <label for="lastName">Last Name</label>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="lastName"
+            placeholder="Last Name"
+          />
+          <div class="invalid-feedback">Please supply your last name</div>
+        </div>
+        <div class="form-group input-with-icon">
+          <label for="email">E-Mail</label>
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            class="form-control is-invalid"
+            id="email"
+            placeholder="E-Mail Address"
+          />
+          <div class="invalid-feedback">Please supply your email address</div>
+        </div>
+        <div class="form-group input-with-icon">
+          <label for="phone">Phone #</label>
+          <i class="fas fa-phone"></i>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="phone"
+            placeholder="(845)555-1212"
+          />
+          <div class="invalid-feedback">Please supply your phone number</div>
+        </div>
+        <div class="form-group input-with-icon">
+          <label for="address">Address</label>
+          <i class="fas fa-home"></i>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="address"
+            placeholder="Address"
+          />
+          <div class="invalid-feedback">Please supply your street address</div>
+        </div>
+        <div class="form-group input-with-icon">
+          <label for="city">City</label>
+          <i class="fas fa-city"></i>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="city"
+            placeholder="City"
+          />
+          <div class="invalid-feedback">Please supply your city</div>
+        </div>
+        <div class="form-group input-with-icon">
+          <label for="state">State</label>
+          <i class="fas fa-map-marker-alt"></i>
+          <select class="form-control" id="state">
+            <option>Please select your state</option>
+            <option value="NY">New York</option>
+            <option value="CA">California</option>
+            <!-- Add more states as needed -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Do you have hosting?</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="hosting"
+                id="hostingYes"
+                value="yes"
+              />
+              <label class="form-check-label" for="hostingYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="hosting"
+                id="hostingNo"
+                value="no"
+              />
+              <label class="form-check-label" for="hostingNo">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group input-with-icon">
+          <label for="projectDescription">Project Description</label>
+          <i class="fas fa-pencil-alt"></i>
+          <textarea
+            class="form-control"
+            id="projectDescription"
+            rows="3"
+            placeholder="Project Description"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning">
+          Send <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
