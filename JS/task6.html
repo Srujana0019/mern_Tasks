@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .outer-box {
+        align-items: center;
+        margin-top: 5em;
+        border: 0.1px solid rgb(215, 217, 218);
+        background-color: rgb(247, 246, 246);
+        border-radius: 5px;
+        padding: 20px;
+      }
+      .feild input {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 15px;
+        border: 1px solid rgb(215, 217, 218);
+      }
+      .feild span {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 3px 0px 0px 3px;
+      }
+      button {
+        width: 100%;
+        border: 1px solid blue;
+        border-radius: 3px;
+        background-color: blue;
+        padding: 7px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 15px;
+      }
+      .link-box a {
+        padding-left: 50px;
+      }
+      .footer-box p,
+      a {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-box">
+      <div style="text-align: center">
+        <i><h1>Instagram</h1></i>
+      </div>
+      <form id="signInForm">
+        <div class="feild input-group-prepend">
+          <span class="input-group-text" id="fn">
+            <i class="fas fa-user"></i>
+          </span>
+          <input
+            type="text"
+            placeholder="Username"
+            id="username"
+            aria-describedby="fn"
+            required
+          />
+        </div>
+        <div class="feild input-group-prepend">
+          <span class="input-group-text" id="ps">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            aria-describedby="ps"
+            required
+          />
+        </div>
+        <button type="submit">Log in</button>
+    </form>
+        <div class="link-box" style="margin-bottom: 20px">
+          <input type="checkbox" /> Remember me
+          <a href="#">Forgot Password?</a>
+        </div>
+      <hr style="border-top: 1px solid rgb(170, 168, 168); margin-left: 0" />
+      <div class="footer-box">
+        <p>
+          Don't have an account!
+          <a href="#">Sign up here.</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+        document.getElementById('signInForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+        
+            if (username && password) {
+                alert('Logging in as ' + username);
+            } else {
+                alert('Please fill in both fields');
+            }
+        });
+    </script>
+  </body>
+</html>

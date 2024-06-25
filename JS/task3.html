@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .box {
+        border: 1px solid black;
+        padding: 1rem;
+      }
+      table,
+      tr,
+      td {
+        padding: 5px;
+      }
+      input {
+        margin-left: 10px;
+        border-radius: 3px;
+      }
+      input:hover {
+        border: 2px solid rgb(186, 197, 201);
+      }
+      p {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <table>
+        <tr>
+          <td>1st Number:</td>
+          <td>
+            <input type="text" name="num1" id="num1" />
+          </td>
+        </tr>
+        <tr>
+          <td>2nd Number:</td>
+          <td>
+            <input type="text" nam="num2" id="num2" />
+          </td>
+        </tr>
+      </table>
+      <input type="button" value="Multiply" onclick="multiply();" />
+      <input type="button" value="Divide" onclick="divide();" />
+      <p>
+        The Result Is:
+        <br />
+        <span id="theResult" style="padding-left: 10px"></span>
+      </p>
+    </div>
+
+    <script>
+      function multiply() {
+        var numOne = document.getElementById("num1").value;
+        var numTwo = document.getElementById("num2").value;
+        var theProduct = parseInt(numOne) * parseInt(numTwo);
+        var p = document.getElementById("theResult");
+        p.innerHTML = theProduct;
+      }
+      function divide() {
+        var numOne = document.getElementById("num1").value;
+        var numTwo = document.getElementById("num2").value;
+        var theResult = parseInt(numOne) / parseInt(numTwo);
+        var d = document.getElementById("theResult");
+        d.innerHTML = theResult;
+      }
+    </script>
+  </body>
+</html>

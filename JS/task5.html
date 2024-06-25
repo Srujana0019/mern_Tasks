@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+    <style>
+        .outer-div{
+            margin-left: 20em;
+            margin-top: 5rem;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+        }
+        .box span,input,textarea{
+            margin-left: 10px;
+        }
+        textarea{
+            width: 20%;
+            height: 80px;
+        }
+        .box label{
+            width: 26%;
+            text-align: right;
+            font-weight: bold;
+        }
+        .error{
+            color: rgb(216, 20, 20);
+            display: none;
+        }
+        .input-error{
+           border: 2px solid rgb(216, 20, 20);
+        }
+        .btn{
+            margin-left: 27%;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            background-color: rgb(233, 232, 232);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="outer-div">
+      <form id="myForm" onsubmit="return validateForm()">
+        <div class="box">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <span class="error" id="nameError">This feild is required</span>
+        </div>
+        <br />
+        <div class="box">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+          <span class="error" id="emailError">
+            A valid email address is required
+          </span>
+        </div>
+        <br />
+        <div class="box">
+          <label for="web">Website:</label>
+          <input type="url" id="web" name="web" />
+          <span class="error" id="webError">A valid url is required</span>
+        </div>
+        <br />
+        <div class="box">
+          <label for="mgs">Message:</label>
+          <textarea name="mgs" id="mgs"></textarea>
+          <span class="error" id="mgsError">This feild is required</span>
+        </div>
+        <br />
+        <input class="btn" type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script>
+        function validateForm(){
+            let isValid = true;
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const web = document.getElementById("web").value;
+            const mgs = document.getElementById("mgs").value;
+
+            const nameField = document.getElementById("name");
+            const emailField = document.getElementById("email");
+            const webField = document.getElementById("web");
+            const mgsField = document.getElementById("mgs");
+
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const webError = document.getElementById("webError");
+            const mgsError = document.getElementById("mgsError");
+
+            if(!name){
+                nameError.style.display = 'inline';
+                nameField.classList.add("input-error");
+                isValid = false;
+            }
+
+            if(!email){
+                emailError.style.display = 'inline';
+                isValid = false;
+                emailField.classList.add("input-error");
+            }
+            if(!web){
+                webError.style.display = 'inline';
+                webField.classList.add("input-error");
+                isValid = false;
+            }
+            if(!mgs){
+                mgsError.style.display = 'inline';
+                mgsField.classList.add("input-error");
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+  </body>
+</html>
