@@ -1,0 +1,12 @@
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+}
+.form-box{
+    height: 40vh;
+    margin: 2rem;
+}
+.about-img{
+    background-image: url(talk-to-us.jpg);
+    background-size: cover;
+}

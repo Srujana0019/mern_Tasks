@@ -11,10 +11,9 @@ export default class AxiosFunc extends Component {
   componentDidMount() {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
       this.setState({ people: res.data });
-    })
+    });
   }
   render() {
     return <div>{console.log(this.state.people)}</div>;
-    
   }
 }

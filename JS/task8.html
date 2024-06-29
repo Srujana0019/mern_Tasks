@@ -1,0 +1,230 @@
+<html>
+<head>
+    <title>Task 8</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+           .box{
+                width: 50rem;
+                background-image: linear-gradient(rgb(240, 240, 188),rgb(247,136,247));
+                margin: auto;             
+                height: 50rem;
+           }
+            th{
+                width: 150px;
+            }
+            .bg-container{
+                height: 50rem;
+            }
+            input{
+              height: 20px;
+            }
+           </style>
+        
+    
+</head>
+<body>
+    <div class="box">
+    <div class="bg-container " style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 style="color: blue; text-align: center;">Registration Form</h1>
+
+        <form class="form" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <th>
+                       <label class="form-label">Firstname</label> 
+                    </th>
+                    <td>
+                       <input class="form-control" type="text"  id="i1" />  
+                    </td>
+                    <td >
+                        <span class="mx-2 text-danger" id="firstname-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th> <label class="form-label">Last Name</label> </th>
+                    <td>
+                       <input class="form-control" type="text" style="width: 300px;" id="i2" />
+                    </td>
+                    <td>
+                        <span class="mx-2 text-danger" id="lastname-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th> <label class="form-label">Email</label> </th>
+                    <td>
+                       <input class="form-control" type="email" style="width: 300px;" id="i3"/>
+                    </td>
+                    <td>
+                        <span class="mx-2 text-danger" id="email-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th> <label class="form-label">Password</label> </th>
+                    <td>
+                       <input   class="form-control" type="password" style="width: 300px;" id="i4" />
+                    </td>
+                    <td>
+                        <span class="mx-2 text-danger" id="password-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th> <label class="form-label">Re-enter Password</label> </th>
+                    <td>
+                       <input class="form-control" type="password" style="width: 300px;" id="i5"/>
+                    </td>
+                    <td>
+                        <span class="mx-2 text-danger" id="re-password-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="2"> <label class="form-label">Gender:</label> </th>
+                    <td>
+                        <input  type="radio" name="gender" checked/> <label>Male</label>
+                    </td>
+                    <tr>
+                        <td>
+                            <input type="radio" name="gender"/> <label>Female</label>
+                        </td>    
+                    </tr>
+                       
+                    
+                </tr>
+                <tr>
+                    <th> <label class="form-label">Age:</label> </th>
+                    <td>
+                       <input class="form-control" type="number" style="width: 300px;"  id="i6" />
+                    </td>
+                    <td>
+                        <span class="mx-2 text-danger" id="age-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label class="form-label">Phone Number:</label></th>
+                    <td><input class="form-control" type="number" style="width: 300px;"  id="i7" /></td>
+                    <td>
+                        <span class="mx-2 text-danger" id="phone-number-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label class="form-label">Address:</label></th>
+                    <td><textarea class="form-control" cols="20" rows="5" style="width: 300px;"  id="i8" ></textarea></td>
+                    <td>
+                        <span class="mx-2 text-danger" id="address-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label class="form-label">State:</label></th>
+                    <td><input class="form-control" type="text" style="width: 300px;"  id="i9" /></td>
+                    <td>
+                        <span class="mx-2 text-danger" id="state-check"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label class="form-label">Country:</label></th>
+                    <td>
+                        <select class="form-select">
+                            <option>Choose Your country</option>
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                            <option>Austraila</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label class="form-label">Langauges known</label></th>
+                    <td>
+                        <input type="checkbox"/>
+                        <label>English</label>
+                        <input type="checkbox"/>
+                        <label>Kannada</label>
+                        <input type="checkbox"/>
+                        <label>Hindi</label>
+                        <input type="checkbox"/>
+                        <label>Telugu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        <input type="checkbox" name="declaration" checked> Hereby I declare all the given details are true
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right;"><p>Log into<a href="https://www.ethnus.com" target="_blank"> Ethnus </a></a>website</p></td>
+                </tr>
+              
+            </table>
+
+        <div class="text-center">
+            <button style="margin: 10px; border-radius: 10px;  border-width:0px; height: 30px; width: 100px;" class="bg-danger text-light" type="submit">Register</button>
+        </div>
+    </div>
+</form>
+</div>
+
+    <script>
+        function validate() {
+            var firstName = document.getElementById("i1").value;
+            var lastName = document.getElementById("i2").value;
+            var email = document.getElementById("i3").value;
+            var password = document.getElementById("i4").value;
+            var rePassword = document.getElementById("i5").value;
+            var age = document.getElementById("i6").value;
+            var phoneNumber = document.getElementById("i7").value;
+            var address = document.getElementById("i8").value;
+            var state = document.getElementById("i9").value;
+            if (firstName.trim() === "") {
+                document.getElementById("firstname-check").textContent = "POOR";
+                document.getElementById("firstname-check").style.color = "red";
+            }
+
+            if (lastName.trim() === "") {
+                document.getElementById("lastname-check").textContent = "POOR";
+                document.getElementById("lastname-check").style.color = "red";
+            }
+
+            if (email.trim() === "") {
+                document.getElementById("email-check").textContent = "POOR";
+                document.getElementById("email-check").style.color = "red";
+            }
+
+            if (password.trim() === "") {
+                document.getElementById("password-check").textContent = "POOR";
+                document.getElementById("password-check").style.color = "red";
+            }
+
+            if (rePassword.trim() === "") {
+                document.getElementById("re-password-check").textContent = "POOR OR MISMATCH";
+                document.getElementById("re-password-check").style.color = "red";
+            }
+            else{
+                if(rePassword!==password){
+                    document.getElementById("re-password-check").textContent = "MISMATCH";
+
+                }
+            }
+
+            if (age.trim() === "") {
+                document.getElementById("age-check").textContent = "POOR";
+                document.getElementById("age-check").style.color = "red";
+            }
+
+            if (phoneNumber.trim() === "") {
+                document.getElementById("phone-number-check").textContent = "POOR";
+                document.getElementById("phone-number-check").style.color = "red";
+            }
+
+            if (address.trim() === "") {
+                document.getElementById("address-check").textContent = "POOR";
+                document.getElementById("address-check").style.color = "red";
+            }
+
+            if (state.trim() === "") {
+                document.getElementById("state-check").textContent = "POOR";
+                document.getElementById("state-check").style.color = "red";
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
